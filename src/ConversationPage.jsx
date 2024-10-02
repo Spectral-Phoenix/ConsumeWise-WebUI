@@ -312,14 +312,17 @@ const ConversationPage = ({ isDarkMode, transition }) => {
                     className="flex flex-col items-center justify-center flex-grow"
                   >
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
                       alt="Assistant Profile"
                       className="w-24 h-24 rounded-full mb-4 shadow-lg"
                     />
                     <h3 className="text-xl font-medium mb-2 text-center">Welcome to the Assistant</h3>
                     <p className="text-sm text-center mb-4">
-                      I'm here to help you with any questions related to the product. Feel free to ask
+                      I'm here to help you with any questions related to the food products. Feel free to ask
                       anything!
+                    </p>
+                    <p className="text-sm text-center mb-4">
+                      This feature is still in developement!!
                     </p>
                   </motion.div>
                 )}
