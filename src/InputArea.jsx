@@ -83,7 +83,6 @@ const InputArea = ({ isDarkMode, onSubmit }) => {
       }
 
       try {
-        console.log("API URL:", import.meta.env.VITE_MAIN_API_URL);
         const response = await fetch("https://translation-periodically-surveys-ratings.trycloudflare.com/process_product", {
           method: "POST",
           body: data instanceof FormData ? data : JSON.stringify(data),

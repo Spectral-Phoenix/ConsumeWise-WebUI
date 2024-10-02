@@ -80,7 +80,7 @@ const ProductInfoBentoGrid = ({ productData, isDarkMode, isLoadingAnalysis, anal
               </ReactMarkdown>
             ))}
             {!analysisData && isLoadingAnalysis && <Loader />}
-            {!analysisData && !isLoadingAnalysis && <p>No analysis data available.</p>}
+            {!analysisData && !isLoadingAnalysis && <p>Add Dietary Preference to get personalised analysis</p>}
           </CardContent>
         </Card>
 
@@ -148,12 +148,13 @@ const ConversationPage = ({ isDarkMode, transition }) => {
   const [analysisData, setAnalysisData] = useState(null);
   const [isLoadingAnalysis, setIsLoadingAnalysis] = useState(false);
 
-  const userData = JSON.parse(localStorage.getItem("userData"));
+  const userData = JSON.parse(localStorage.getItem("formData"));
 
   const analysisRequested = useRef(false); 
 
   useEffect(() => {
     const fetchAnalysis = async () => {
+      console.log("User Data:",userData)
       if (productData && userData && !analysisRequested.current) {
         analysisRequested.current = true;
         setIsLoadingAnalysis(true);
