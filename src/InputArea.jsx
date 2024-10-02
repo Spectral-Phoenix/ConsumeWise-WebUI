@@ -83,7 +83,8 @@ const InputArea = ({ isDarkMode, onSubmit }) => {
       }
 
       try {
-        const response = await fetch("http://35.192.143.44:8000/process_product", {
+        console.log("API URL:", import.meta.env.VITE_MAIN_API_URL);
+        const response = await fetch(import.meta.env.MAIN_API_URL, {
           method: "POST",
           body: data instanceof FormData ? data : JSON.stringify(data),
           headers: data instanceof FormData ? {} : { "Content-Type": "application/json" },

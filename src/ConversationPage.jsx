@@ -163,7 +163,7 @@ const ConversationPage = ({ isDarkMode, transition }) => {
             userData,
           };
 
-          const response = await fetch("http://35.192.143.44:8000/analysis", {
+          const response = await fetch(import.meta.env.VITE_ANALYSE_API_URL, {
             method: "POST",
             headers: {
               "Content-Type": "text/plain",
