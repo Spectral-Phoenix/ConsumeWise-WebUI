@@ -163,7 +163,7 @@ const ConversationPage = ({ isDarkMode, transition }) => {
             userData,
           };
 
-          const response = await fetch(import.meta.env.VITE_ANALYSE_API_URL, {
+          const response = await fetch("https://translation-periodically-surveys-ratings.trycloudflare.com/analysis", {
             method: "POST",
             headers: {
               "Content-Type": "text/plain",
